@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+    	<title>Isometric game</title>
+      <style>
+      html,body{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+      }
+      #canvas{
+        display: block; /** no scrollbars **/
+        margin: 0px auto;
+      }
+      </style>
+  	</head>
+  	<body>
+  		<canvas id="canvas"></canvas>
+  	</body>
+  	<script>
+		let CANVAS = document.getElementById('canvas');
+    var resizeCanvas = ()=>{
+      CANVAS.height = window.innerHeight;
+      CANVAS.width = window.innerWidth;
+    };
+    //window.addEventListener('resize', resizeCanvas, false);
+    resizeCanvas();
+    const CANVAS_CONTEXT = CANVAS.getContext('2d');
+		const CUBE_SIZE = 40;
+  	</script>
+  	<script src="app.js"></script>
+</html>
