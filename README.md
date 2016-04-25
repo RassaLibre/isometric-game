@@ -3,9 +3,12 @@ I am a big fan of old isometric games (Pharaoh, Theme Hospital, Age of Empires) 
 
 ![image](https://raw.githubusercontent.com/RassaLibre/isometric-game/master/pics/trees.png)
 
-##Specify maps as JSON arrays
+##JSON Maps
+You can specify your map as a JSON arrays. For example the following map has two layers. `G` stands for grass, `W` for water, `R` for rock and `T` for a tree. This is of course configurable.
 
-
+![image](https://raw.githubusercontent.com/RassaLibre/isometric-game/master/pics/map.png)
 
 ##Render only the current viewport
+So far my favourite feature is rendering only what is in the viewport. This ensures smooth rendering even with gigantic maps.
 ![image](https://raw.githubusercontent.com/RassaLibre/isometric-game/master/pics/viewport.gif)
+
