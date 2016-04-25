@@ -9,6 +9,7 @@ You can specify your map as a JSON arrays. For example the following map has two
 ![image](https://raw.githubusercontent.com/RassaLibre/isometric-game/master/pics/map.png)
 
 ##Render only the current viewport
-So far my favourite feature is rendering only what is in the viewport. This ensures smooth rendering even with gigantic maps.
+So far my favourite feature is rendering only what is in the viewport. This ensures smooth rendering even with gigantic maps. There is just something visual pleasing to see the objects disappear and then appear again :-)
+
 ![image](https://raw.githubusercontent.com/RassaLibre/isometric-game/master/pics/viewport.gif)
 
