@@ -30,11 +30,11 @@ export default class Viewport{
 
 		let lastMoveEvent;
 
-		CANVAS.addEventListener('mousedown', (event) => {
+		document.body.addEventListener('mousedown', (event) => {
 			mouseDownEvent = event;
 		});
 
-		CANVAS.addEventListener('mousemove', (event) => {
+		document.body.addEventListener('mousemove', (event) => {
 			if(mouseDownEvent){
 				let deltaX, deltaY;
 				if(!lastMoveEvent){
@@ -53,9 +53,28 @@ export default class Viewport{
 			}
 		});
 
-		CANVAS.addEventListener('mouseup', (event) => {
+		/**
+		*	because the user can press the mouse and then leave the
+		*	browser window while the mouse is still pressed. Once the
+		*	user leaves the window, we want to do the same as if mouseup
+		*	was triggered.
+		*/
+		document.body.addEventListener('mouseout', (event)=>{
+			if(mouseDownEvent) mouseDownEvent = null;
+			if(lastMoveEvent) lastMoveEvent = null;
+		});
+
+		document.body.addEventListener('mouseup', (event) => {
 			mouseDownEvent = null;
 			lastMoveEvent = null;
+		});
+
+		/**
+		*	Because when the window size changes, we want to recalculate
+		*	the size of the viewport
+		*/
+		window.addEventListener('resize', (event) => {
+			console.log('I am getting resized!', event)
 		});
 	}
 
